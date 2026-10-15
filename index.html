@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>【モーマンタイム】10/16 アプデ情報</title>
+  <title>【モーマンタイム】10/16 アプデ情報（スッキリ版）</title>
   <style>
     :root {
       --primary: #1e293b;
@@ -43,14 +43,6 @@
       background: rgba(255,255,255,0.15);
     }
 
-    /* ヘッダー */
-    .header-card {
-      background: linear-gradient(135deg, #0f172a, #334155);
-      color: #fff; padding: 16px; border-radius: 10px;
-      margin-bottom: 12px;
-    }
-    .header-card h1 { margin: 0; font-size: 1.4rem; }
-
     /* メンテナンスバナー */
     .notice-banner {
       background: #fff; border-left: 5px solid var(--accent);
@@ -70,7 +62,7 @@
     .sec-adj { background: #f3e8ff; color: #6b21a8; border-left: 4px solid #9333ea; }
     .sec-fix { background: #dcfce7; color: #166534; border-left: 4px solid #16a34a; }
 
-    /* アコーディオンカード（スッキリ化の肝） */
+    /* アコーディオンカード */
     .compact-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -80,7 +72,6 @@
       overflow: hidden;
     }
     
-    /* カードの折りたたみ見出し */
     .compact-card > details > summary {
       padding: 12px 16px;
       font-size: 1rem;
@@ -115,7 +106,7 @@
       background: #f1f5f9; padding: 4px 8px; border-radius: 4px; display: inline-block;
     }
 
-    /* ネストされた折りたたみ（深掘り用） */
+    /* ネストされた折りたたみ */
     .inner-details {
       background: #f8fafc; border: 1px solid var(--border);
       border-radius: 6px; margin-top: 10px; padding: 8px 12px;
@@ -139,15 +130,15 @@
 
 <div class="container">
 
+  <!-- メンテナンスバナー -->
   <div class="notice-banner">
     <div class="notice-title">⚠️ 定例メンテナンスのお知らせ</div>
     <p style="margin: 0; font-size: 0.88rem;">
-      <strong>【日時】2026年10月16日(金) 16:00 ～（約2時間予定）</strong><br>
-      親愛なる首長様、いつもご利用いただきありがとうございます。この度、より良いゲーム体験のためにサーバー定例メンテナンスを実行いたします。メンテナンス中の約2時間はゲームにログインできなくなります。具体的なサービス再開時間は実際の状況により前後する可能性がありますので、ご了承下さいませ。
+      <strong>【日時】2026年10月16日(金) <br>16:00 ～（約2時間予定）</strong>
     </p>
   </div>
 
-  <!-- 【トップ表示】要約カード（最初は開いた状態） -->
+  <!-- 【トップ表示】要約カード -->
   <div id="sec-sum" class="sec-title sec-sum">⚡ 要約：今回の変更ポイント</div>
   <div class="compact-card" style="border: 2px solid #facc15;">
     <details open>
@@ -164,7 +155,7 @@
     </details>
   </div>
 
-  <!-- 【ノーカット全文】追加内容（最初は折りたたんでスッキリ） -->
+  <!-- 【ノーカット全文】追加内容 -->
   <div id="sec-add" class="sec-title sec-add">📄 追加内容詳細（タップで各項目を展開）</div>
 
   <!-- 一、誇父計画イベント追加 -->
@@ -246,6 +237,7 @@
       </div>
     </details>
   </div>
+
   <!-- 二、新たに天工システムを追加 -->
   <div class="compact-card">
     <details>
