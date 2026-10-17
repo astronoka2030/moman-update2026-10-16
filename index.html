@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>【モーマンタイム】10/16 アプデ情報</title>
+  <title>【モーマンタイム】10/16 アプデ情報（スッキリ版）</title>
   <style>
     :root {
       --primary: #1e293b;
@@ -53,14 +53,13 @@
 
     /* セクションタイトル */
     .sec-title {
-      font-size: 1.15rem; font-weight: bold;
+      font-size: 1.1rem; font-weight: bold;
       padding: 8px 12px; border-radius: 6px;
       margin: 20px 0 10px 0; scroll-margin-top: 60px;
     }
-    .sec-sum { background: #fef9c3; color: #854d0e; border-left: 4px solid #ca8a04; }
-    .sec-add { background: #e0f2fe; color: #0369a1; border-left: 4px solid #0284c7; }
-    .sec-adj { background: #f3e8ff; color: #6b21a8; border-left: 4px solid #9333ea; }
-    .sec-fix { background: #dcfce7; color: #166534; border-left: 4px solid #16a34a; }
+    .sec-add { background: #e0f2fe; color: #0369a1; border-left: 5px solid #0284c7; }
+    .sec-adj { background: #f3e8ff; color: #6b21a8; border-left: 5px solid #9333ea; }
+    .sec-fix { background: #dcfce7; color: #166534; border-left: 5px solid #16a34a; }
 
     /* アコーディオンカード */
     .compact-card {
@@ -74,17 +73,32 @@
     
     .compact-card > details > summary {
       padding: 12px 16px;
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: bold;
       color: var(--primary);
       cursor: pointer;
       background: #fff;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       list-style: none;
     }
     .compact-card > details > summary::-webkit-details-marker { display: none; }
+
+    /* タイトルテキストを左寄せ */
+    .summary-title {
+      flex: 1;
+    }
+
+    /* TAP注記テキスト（「＋」のすぐ左に小さく表示） */
+    .tap-hint {
+      font-size: 0.75rem;
+      font-weight: normal;
+      color: #0284c7;
+      margin-right: 8px;
+      opacity: 0.85;
+    }
+
+    /* ＋ / － アイコン */
     .compact-card > details > summary::after {
       content: "＋";
       font-size: 1.1rem;
@@ -134,13 +148,18 @@
   <div class="notice-banner">
     <div class="notice-title">⚠️ 定例メンテナンスのお知らせ</div>
     <p style="margin: 0; font-size: 0.88rem;">
-      <strong>【日時】2026年10月16日(金) 16:00 ～<br> メンテナンスは約2時間の予定です。</strong>
+      <strong>【日時】2026年10月16日(金) 16:00 ～（約2時間予定）</strong><br>
+      いつもご利用いただきありがとうございます。この度、より良いゲーム体験のためにサーバー定例メンテナンスを実行いたします。メンテナンス中の約2時間はゲームにログインできなくなります。具体的なサービス再開時間は実際の状況により前後する可能性がありますので、ご了承下さいませ。
     </p>
   </div>
 
-  <div class="compact-card" style="border: 2px solid #facc15;">
+  <!-- トップの要約カード -->
+  <div id="sec-sum" class="compact-card" style="border: 2px solid #facc15; margin-bottom: 16px;">
     <details open>
-      <summary>📌 アプデ要点まとめ (TAPで閉じる)</summary>
+      <summary>
+        <span class="summary-title">📌 アプデ要点まとめ</span>
+        <span class="tap-hint">(TAPで閉じる)</span>
+      </summary>
       <div class="card-content">
         <ul>
           <li><strong>🚀 誇父計画イベント：</strong>ロケット製造＆星間開拓の2段階進行。新名士「星神誇父」登場！繁栄度5000万で銀河帝国建国。</li>
@@ -153,13 +172,16 @@
     </details>
   </div>
 
-  <!-- 【ノーカット全文】追加内容 -->
-  <div id="sec-add" class="sec-title sec-add">📄 追加内容詳細 (TAPで展開)</div>
+  <!-- 【追加内容】 -->
+  <div id="sec-add" class="sec-title sec-add">📄 追加内容詳細</div>
 
   <!-- 一、誇父計画イベント追加 -->
   <div class="compact-card">
     <details>
-      <summary>一、誇父計画イベント追加</summary>
+      <summary>
+        <span class="summary-title">一、誇父計画イベント追加</span>
+        <span class="tap-hint">(TAPで展開)</span>
+      </summary>
       <div class="card-content">
         <ol>
           <li>人類の生存空間を広げるため、人類は宇宙へ進出し、文明の火種を銀河へ広めることを決意しました。こうして誇父計画が生まれました。</li>
@@ -235,11 +257,13 @@
       </div>
     </details>
   </div>
-
   <!-- 二、新たに天工システムを追加 -->
   <div class="compact-card">
     <details>
-      <summary>二、新たに天工システムを追加</summary>
+      <summary>
+        <span class="summary-title">二、新たに天工システムを追加</span>
+        <span class="tap-hint">(TAPで展開)</span>
+      </summary>
       <div class="card-content">
         <h4>【投資項目】</h4>
         <ol>
@@ -308,11 +332,14 @@
   <!-- 三～十三 追加項目 -->
   <div class="compact-card">
     <details>
-      <summary>三、新規イベント秋夜の宝探し・その他の追加項目</summary>
+      <summary>
+        <span class="summary-title">三、新規イベント秋夜の宝探し・その他の追加項目</span>
+        <span class="tap-hint">(TAPで展開)</span>
+      </summary>
       <div class="card-content">
         <h4>三、新規イベント秋夜の宝探しを追加</h4>
         <details class="inner-details">
-          <summary>秋夜の宝探しの詳細ルール</summary>
+          <summary>🎑 秋夜の宝探しの詳細ルール</summary>
           <h5>【イベント説明】</h5>
           <ol>
             <li>秋が訪れ、嫦娥が首長様を招待して、一緒に月餅を切っておいしさを分ち合います～</li>
@@ -378,10 +405,13 @@
   </div>
 
   <!-- 「調整内容」 -->
-  <div id="sec-adj" class="sec-title sec-adj">⚙️ 調整内容</div>
+  <div id="sec-adj" class="sec-title sec-adj">「調整内容」</div>
   <div class="compact-card">
     <details>
-      <summary>一〜二、富貴栄華・世界遠征などの最適化</summary>
+      <summary>
+        <span class="summary-title">一〜二、富貴栄華・世界遠征などの最適化</span>
+        <span class="tap-hint">(TAPで展開)</span>
+      </summary>
       <div class="card-content">
         <h4>一、富貴栄華の遊び方を最適化</h4>
         <ol>
@@ -413,10 +443,13 @@
   </div>
 
   <!-- 「修復内容」 -->
-  <div id="sec-fix" class="sec-title sec-fix">🔧 修復内容</div>
+  <div id="sec-fix" class="sec-title sec-fix">「修復内容」</div>
   <div class="compact-card">
     <details>
-      <summary>不具合修正・バグ修復一覧（全6項目）</summary>
+      <summary>
+        <span class="summary-title">不具合修正・バグ修復一覧（全6項目）</span>
+        <span class="tap-hint">(TAPで展開)</span>
+      </summary>
       <div class="card-content">
         <ol>
           <li>「収集品」ルール説明の誤りを修正し、装備中の収集品も分解できるようにしました</li>
